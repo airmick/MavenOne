@@ -17,15 +17,16 @@ public class App {
                 .mapToInt(i -> i)
                 .toArray();
 
-        System.out.println("Printing the whole array...");
-        Arrays.stream(randomNumbers)
-                .forEach(System.out::println);
-        System.out.println("Sorted Array ");
+        System.out.print("\n");
+        System.out.println("-------> list of generated unsorted array <-------");
+        System.out.println(Arrays.toString(randomNumbers));
+        System.out.print("\n");
+        System.out.println("-------> list of generated Array after Sorting <------");
         sortingArray(randomNumbers);
         System.out.print(Arrays.toString(randomNumbers));
 
-        System.out.println("\n\nThe largest number is: " + findLargestNumber(randomNumbers));
-        System.out.println("\n\nThe smallest number is: " + findSmallestNumber(randomNumbers));
+        System.out.print("\n\n-----> The largest number in the Array is : " + findLargestNumber(randomNumbers));
+        System.out.println("\n-----> The smallest number in the Array is: " + findSmallestNumber(randomNumbers));
     }
     private static int findLargestNumber(int[] getRandomNumber)
     {
@@ -45,4 +46,5 @@ public class App {
     {
         Arrays.sort(n);
     }
+
 }
